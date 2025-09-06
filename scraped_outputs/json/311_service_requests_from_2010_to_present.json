@@ -1,0 +1,256 @@
+{
+  "title": "311 Service Requests from 2010 to Present",
+  "description": "NOTE: The 311 dataset is currently showing incorrect values in the \"Agency Name\" column. Please use the \"Agency\" column in the interim while this is being resolved. All 311 Service Requests from 2010 to present. This information is automatically updated daily.",
+  "update_frequency": null,
+  "endpoint": "https://data.cityofnewyork.us/resource/erm2-nwe9",
+  "data_dictionary": [
+    {
+      "column_name": "Unique Key",
+      "description": "Unique identifier of a Service Request (SR) in the open data set",
+      "api_field_name": "unique_key",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Created Date",
+      "description": "Date SR  was created",
+      "api_field_name": "created_date",
+      "data_type": "calendar_date"
+    },
+    {
+      "column_name": "Closed Date",
+      "description": "Date SR was closed by responding agency",
+      "api_field_name": "closed_date",
+      "data_type": "calendar_date"
+    },
+    {
+      "column_name": "Agency",
+      "description": "Acronym of responding City Government Agency",
+      "api_field_name": "agency",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Agency Name",
+      "description": "Full Agency name of responding City Government Agency",
+      "api_field_name": "agency_name",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Complaint Type",
+      "description": "This is the first level of a hierarchy identifying the topic of the incident or condition. Complaint Type may have a corresponding Descriptor (below) or may stand alone.",
+      "api_field_name": "complaint_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Descriptor",
+      "description": "This is  associated to the Complaint Type, and provides further detail on the incident or condition. Descriptor values are dependent on the Complaint Type, and are not always required in SR.",
+      "api_field_name": "descriptor",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Location Type",
+      "description": "Describes the type of location used in the address information",
+      "api_field_name": "location_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Incident Zip",
+      "description": "Incident location zip code, provided by geo validation.",
+      "api_field_name": "incident_zip",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Incident Address",
+      "description": "House number of incident address provided by submitter.",
+      "api_field_name": "incident_address",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Street Name",
+      "description": "Street name of incident address provided by the submitter",
+      "api_field_name": "street_name",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Cross Street 1",
+      "description": "First Cross street based on the geo validated incident location",
+      "api_field_name": "cross_street_1",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Cross Street 2",
+      "description": "Second Cross Street based on the geo validated incident location",
+      "api_field_name": "cross_street_2",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Intersection Street 1",
+      "description": "First intersecting street based on geo validated incident location",
+      "api_field_name": "intersection_street_1",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Intersection Street 2",
+      "description": "Second intersecting street based on geo validated incident location",
+      "api_field_name": "intersection_street_2",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Address Type",
+      "description": "Type of incident location information available.",
+      "api_field_name": "address_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "City",
+      "description": "City of the incident location provided by geovalidation.",
+      "api_field_name": "city",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Landmark",
+      "description": "If the incident location is identified as a Landmark the name of the landmark will display here",
+      "api_field_name": "landmark",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Facility Type",
+      "description": "If available, this field describes the type of city facility associated to the SR",
+      "api_field_name": "facility_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Status",
+      "description": "Status of SR submitted",
+      "api_field_name": "status",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Due Date",
+      "description": "Date when responding agency is expected to update the SR.  This is based on the Complaint Type and internal Service Level Agreements (SLAs).",
+      "api_field_name": "due_date",
+      "data_type": "calendar_date"
+    },
+    {
+      "column_name": "Resolution Description",
+      "description": "Describes the last action taken on the SR by the responding agency.  May describe next or future steps.",
+      "api_field_name": "resolution_description",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Resolution Action Updated Date",
+      "description": "Date when responding agency last updated the SR.",
+      "api_field_name": "resolution_action_updated_date",
+      "data_type": "calendar_date"
+    },
+    {
+      "column_name": "Community Board",
+      "description": "Provided by geovalidation.",
+      "api_field_name": "community_board",
+      "data_type": "text"
+    },
+    {
+      "column_name": "BBL",
+      "description": "Borough Block and Lot, provided by geovalidation. Parcel number to identify the location of location of buildings and properties in NYC.",
+      "api_field_name": "bbl",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Borough",
+      "description": "Provided by the submitter and confirmed by geovalidation.",
+      "api_field_name": "borough",
+      "data_type": "text"
+    },
+    {
+      "column_name": "X Coordinate (State Plane)",
+      "description": "Geo validated, X coordinate of the incident location.",
+      "api_field_name": "x_coordinate_state_plane",
+      "data_type": "number"
+    },
+    {
+      "column_name": "Y Coordinate (State Plane)",
+      "description": "Geo validated,  Y coordinate of the incident location.",
+      "api_field_name": "y_coordinate_state_plane",
+      "data_type": "number"
+    },
+    {
+      "column_name": "Open Data Channel Type",
+      "description": "Indicates how the SR was submitted to 311.  i.e. By Phone, Online, Mobile, Other or Unknown.",
+      "api_field_name": "open_data_channel_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Park Facility Name",
+      "description": "If the incident location is a Parks Dept facility, the Name of the facility will appear here",
+      "api_field_name": "park_facility_name",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Park Borough",
+      "description": "The borough of incident if it is a Parks Dept facility",
+      "api_field_name": "park_borough",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Vehicle Type",
+      "description": "If the incident is a taxi, this field describes the type of TLC vehicle.",
+      "api_field_name": "vehicle_type",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Taxi Company Borough",
+      "description": "If the incident is identified as a taxi, this field will display the borough of the taxi company.",
+      "api_field_name": "taxi_company_borough",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Taxi Pick Up Location",
+      "description": "If the incident is identified as a taxi, this field displays the taxi pick up location",
+      "api_field_name": "taxi_pick_up_location",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Bridge Highway Name",
+      "description": "If the incident is identified as a Bridge/Highway, the name will be displayed here.",
+      "api_field_name": "bridge_highway_name",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Bridge Highway Direction",
+      "description": "If the incident is identified as a Bridge/Highway, the direction where the issue took place would be displayed here.",
+      "api_field_name": "bridge_highway_direction",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Road Ramp",
+      "description": "If the incident location was Bridge/Highway this column differentiates if the issue was on the Road or the Ramp.",
+      "api_field_name": "road_ramp",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Bridge Highway Segment",
+      "description": "Additional information on the section of the Bridge/Highway were the incident took place.",
+      "api_field_name": "bridge_highway_segment",
+      "data_type": "text"
+    },
+    {
+      "column_name": "Latitude",
+      "description": "Geo based Lat of the incident location",
+      "api_field_name": "latitude",
+      "data_type": "number"
+    },
+    {
+      "column_name": "Longitude",
+      "description": "Geo based Long of the incident location",
+      "api_field_name": "longitude",
+      "data_type": "number"
+    },
+    {
+      "column_name": "Location",
+      "description": "Combination of the geo based lat & long of the incident location",
+      "api_field_name": "location",
+      "data_type": "location"
+    }
+  ],
+  "total_columns": 41,
+  "rows": 40947362
+}

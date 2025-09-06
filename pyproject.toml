@@ -1,0 +1,50 @@
+[project]
+name = "TheOpenDataStack"
+version = "0.1.0"
+description = "Build end to end data products with open source tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>=1.35.24",
+    "dagster==1.10.18",
+    "dagster-duckdb>=0.26.2",
+    "dagster-webserver==1.10.18",
+    "dbt-core>=1.8.7",
+    "dbt-duckdb>=1.8.3",
+    "duckdb==1.0.0",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "polars>=1.8.0",
+    "pyarrow>=17.0.0",
+    "python-dotenv>=1.0.1",
+    "python-slugify>=8.0.4",
+    "requests>=2.32.3",
+    "tenacity>=9.0.0",
+    "ruff>=0.6.7",
+    "httpx<0.25.0",
+    "flash>=1.0.3",
+    "flask>=3.1.0",
+    "great-tables>=0.16.1",
+    "dagster-dg>=0.2.2",
+    "dagster-dg-cli>=1.10.18",
+    "aiohttp>=3.12.15",
+    "aiodns>=3.5.0",
+]
+
+
+[tool.dagster]
+module_name = "pipeline.definitions"
+code_location_name = "pipeline"
+
+###############
+# dg settings #
+###############
+
+[tool.dg]
+directory_type = "project"
+
+[tool.dg.project]
+root_module = "pipeline"
+code_location_target_module = "pipeline.definitions"
+[tool.dg.project.python_environment]
+uv_managed = true

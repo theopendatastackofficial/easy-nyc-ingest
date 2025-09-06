@@ -1,0 +1,15 @@
+paths:
+  clean:      data/opendata/clean
+  raw:        data/opendata/raw
+  analytics:  data/opendata/analytics
+  warehouse:  data/duckdb/data.duckdb
+
+# Optional; defaults to this order if omitted
+search_order: [analytics, clean, raw]
+
+assets:
+  - mta_daily_ridership
+  - mta_operations_statement
+  - mta_subway_hourly_ridership
+  - nyc_dob_safety_violations
+  - nyc_nypd_arrests
